@@ -1,0 +1,27 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	font-size: 100%;
+	background-color: #777;
+	color: #FFF;
+}
+
+nav {
+	font-family: "Homenaje", sans-serif;
+	font-size: 100%;
+}
+
+main {
+	font-family: "Six Caps", sans-serif;
+}
+
+main p {
+	font-family: "Oswald", sans-serif;
+}
+
+
+h1 {
+	font-size: 400%;
+}
+
+
