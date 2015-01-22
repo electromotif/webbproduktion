@@ -2,7 +2,7 @@ html, body {
 	width: 100%;
 	height: 100%;
 	font-size: 100%;
-	background-color: #777;
+	background-color: #666;
 	color: #FFF;
 }
 
@@ -11,17 +11,24 @@ nav {
 	font-size: 100%;
 }
 
-main {
-	font-family: "Six Caps", sans-serif;
-}
-
-main p {
-	font-family: "Pathway Gothic One", sans-serif;
-}
-
-
 h1 {
+	font-family: "Six Caps", sans-serif;
 	font-size: 400%;
 }
 
+main {
+	font-family: "Pathway Gothic One", sans-serif;
+}
+
+.mySidebar {
+	font-family: "Oswald", sans-serif;
+}
+
+#content-list {
+	font-family: "Oswald", sans-serif;
+}
+
+#admin-form {
+	font-family: "Oswald", sans-serif;
+}
 
