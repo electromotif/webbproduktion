@@ -16,7 +16,7 @@ function showPage(pageUrl) {
 
   //get main menu links
   //now also sending the createMainMenu() function as a parameter
-  getMenuLinks("menu-main-menu", createMainMenu);
+  // DISABLED getMenuLinks("menu-main-menu", createMainMenu);
 
   //always initially hide the admin content-list search box
   $(".navbarSearchForm").hide();
@@ -24,7 +24,7 @@ function showPage(pageUrl) {
   //if needed get data using AJAX
   if (pageUrl == "content-list") {
     //get admin content list
-    getPages();
+  // DISABLED  getPages();
 
     //and show the admin content-list search box
     $(".navbarSearchForm").fadeIn(500);
@@ -35,7 +35,7 @@ function showPage(pageUrl) {
     //get admin "Add to menu" select list
     //now also sending the createAdminMenuSelect() function 
     //from menus.js as a parameter to getMenuLinks.
-    getMenuLinks("menu-main-menu", createAdminMenuSelect);
+    // DISABLED getMenuLinks("menu-main-menu", createAdminMenuSelect);
   } else {
     //else try to find a page for the url using 
     //getCurrentPage() from ajax.js 
