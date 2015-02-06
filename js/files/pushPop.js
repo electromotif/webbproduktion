@@ -8,60 +8,7 @@
 
 //function to show/hide sections
 function showPage(pageUrl) {
-  //if no pageUrl was recieved (or home was recieved),
-  //show the "front page"
-  if (!pageUrl || pageUrl == "home") {
-    pageUrl = "content-list";
-  }
-
-  //get main menu links
-  //now also sending the createMainMenu() function as a parameter
-  // DISABLED getMenuLinks("menu-main-menu", createMainMenu);
-
-  //always initially hide the admin content-list search box
-  $(".navbarSearchForm").hide();
-
-  //if needed get data using AJAX
-  if (pageUrl == "content-list") {
-    //get admin content list
-  // DISABLED  getPages();
-
-    //and show the admin content-list search box
-    $(".navbarSearchForm").fadeIn(500);
-  } else if (pageUrl == "admin-form") {
-    //hide "Add to menu" fields initially
-    $("#admin-form .menuLinkFields").hide();
-
-    //get admin "Add to menu" select list
-    //now also sending the createAdminMenuSelect() function 
-    //from menus.js as a parameter to getMenuLinks.
-    // DISABLED getMenuLinks("menu-main-menu", createAdminMenuSelect);
-  } else {
-    //else try to find a page for the url using 
-    //getCurrentPage() from ajax.js 
-    getCurrentPage(pageUrl);
-
-    //once we have sent our ajax request for page data,
-    //change pageUrl to the correct section id so that our
-    //section shows
-    pageUrl = "page";
-  }
-
-  //hide all sections in main .row except section.mySidebar
-  $("main .row").children().not(".mySidebar").hide();
-
-  //then show the requested section
-  $('section#'+pageUrl).fadeIn(500);
-
-  //remove .active from all li tags that are inside a ul
-  //with the class .nav
-  $(".nav li").removeClass("active");
-
-  //then find any links in body pointing to the pageUrl,
-  $("body").find('a[href="'+pageUrl+'"]').each(function() {
-    //and add .active to my parent if it is an li tag
-    $(this).parent("li").addClass("active");
-  });
+  
 }
 
 

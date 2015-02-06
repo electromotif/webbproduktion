@@ -1,6 +1,7 @@
 $("document").ready(function(){
 
 pushPopListeners();
+getMnuLnks();
 
 //-----
 
@@ -36,29 +37,28 @@ $("#admin-form form").submit(function() {
 	//prepare adminFormData to be sent with AJAX
 	
 	var adminFormData = {
-
 	  ":title" : $(this).find("#page_title").val(),
 	  ":body" : $(this).find("#page_body").val(),
 	  ":path" : $(this).find("#page_url").val()
-		}
+	};
 
 
-		if ($('.addToMenu input[type="checkbox"]').is(":checked")) {
-		
+	if ($('.addToMenu input[type="checkbox"]').is(":checked")) {
+	
 		//get selected menu parent data
 		adminFormData.menuData = {};
-		adminFormData.menuData["parent"] = $('.addToMenu select').find(":selected").data("menuItem");
+		adminFormData.menuData["parent"] = {"mlid": null, "menu" : "menu-main-menu"};//$('.addToMenu select').find(":selected").data("menuItem");
 		//get menu link title
 		adminFormData.menuData["title"] = $('.addToMenu #menu_title').val();
 		//get menu link order
 		adminFormData.menuData["weight"] = $('.addToMenu #menu_weight').val();
-		}
+	}
 
-   
-		// console.log(adminFormData);
-		insertNuPg(adminFormData);
-		// this.reset();
-		return false;
+ 
+	// console.log(adminFormData);
+	insertNuPg(adminFormData);
+	// this.reset();
+	return false;
 });
 
     
