@@ -10,8 +10,6 @@ function crtMnuTree (menuLinks) {
 
   // loop through menuLinks and ...
 
-  // menuLinks.forEach(function(item) {
-
   for (i = 0; i < menuLinks.length; i++) {
 
   	// Give each menuLinks object a new property - children
@@ -23,7 +21,6 @@ function crtMnuTree (menuLinks) {
 
     hashMap["_"+menuLinks[i].mlid] = menuLinks[i];
     
- 
     // if the object does not have a parent-link ID, 
     // ** assume top-level link and push it to menuTree. **
 
@@ -46,8 +43,6 @@ function crtMnuTree (menuLinks) {
     hashMap["_"+item.plid].children.push(item);
   }; 
 
-  
-  // console.log ("Hash: ", hashMap);
   // console.log (JSON.stringify(menuTree));
 
 	return menuTree;
@@ -75,6 +70,43 @@ function crtAdmMnuSlct (slct_html, menuTree, level) {
 	}
 };
 
+// create user/main menu
+
+function crtMainMnu (ul_html, menuLevel) {
+	for (var i = 0; i < menuLevel.length; i++) {
+		if (menuLevel[i].children.length > 0) {
+			var mnuItem = $('<li class="dropdown"><a href="'+menuLevel[i].path+'">'+menuLevel[i].title+'</a></li>');
+			var dropdown = $('<ul class="dropdown-menu"/>');
+			mnuItem.prepend(dropdown);
+
+			// for (var j = 0; j < menuLevel[i].children.length; j++) {
+			//	console.log ('looping children', menuLevel[i].children[j]);
+			// }
+			crtMainMnu(dropdown, menuLevel[i].children);
+		} else {
+			var mnuItem = $('<li><a href="'+menuLevel[i].path+'">'+menuLevel[i].title+'</a></li>');
+			
+		}
+		ul_html.append(mnuItem);
+	}
+}
+
+
+function crtMainMnu2 (ul_html, menuLevel) {
+	for (var i = 0; i < menuLevel.length; i++) {
+		var mnuItem = $('<li><a href="'+menuLevel[i].path+'">'+menuLevel[i].title+'</a></li>');
+		
+		if (menuLevel[i].children.length > 0) {
+			mnuItem.addClass("dropdown");
+			var dropdown = $('<ul class="dropdown-menu"/>');
+			mnuItem.prepend(dropdown);
+
+			crtMainMnu(dropdown, menuLevel[i].children);
+		}
+
+		ul_html.append(mnuItem);
+	}
+}
 
 
 

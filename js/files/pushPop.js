@@ -9,7 +9,7 @@
 //function to show/hide sections
 function showPage(pageUrl) {
 
-	console.log("showPage");
+	console.log("showPage: ", pageUrl);
   
 }
 

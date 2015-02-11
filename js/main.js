@@ -2,11 +2,7 @@ $("document").ready(function(){
 
 pushPopListeners();
 getMnuLnks("admin-form");
-
-
-//-----
-
-//-----
+getMnuLnks("main");
 	
 //adminForm pageUrlGroup clickHandler
 

@@ -44,7 +44,7 @@ function cntList(data) {
 
 }
 
-function getMnuLnks(data, destination) {
+function getMnuLnks(destination) {
 
 	$.ajax({
 		url: "php/get_mnu_lnks.php",
@@ -55,7 +55,8 @@ function getMnuLnks(data, destination) {
 		success: function(data) {
 			
 			var menuTree = crtMnuTree(data);
-			if (destination = "admin-form") {
+			console.log(destination);
+			if (destination == "admin-form") {
 				var slct_html = $('<select class="form-control"/>');
 
 				var topOptn = $('<option value="">Top</option>');
@@ -68,11 +69,12 @@ function getMnuLnks(data, destination) {
 			} 
 
 			else {
-				var mn_html = $("<ul/>");
+				var mn_html = $("<ul class='nav navbar-nav mainMenuNav'/>");
 
 				crtMainMnu (mn_html, menuTree);
 
-				$(".myMenuCSSSelector").html(mn_html);
+				$(".navbar-invert .navbar-collapse").find(".mainMenuNav").remove();
+				$(".navbar-invert .navbar-collapse").prepend(mn_html);
 			}
 		},
 		error: function(data) {
