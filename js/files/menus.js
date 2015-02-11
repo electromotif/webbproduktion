@@ -47,8 +47,8 @@ function crtMnuTree (menuLinks) {
   }; 
 
   
-  console.log ("Hash: ", hashMap);
-  console.log (JSON.stringify(menuTree));
+  // console.log ("Hash: ", hashMap);
+  // console.log (JSON.stringify(menuTree));
 
 	return menuTree;
 };
@@ -56,8 +56,7 @@ function crtMnuTree (menuLinks) {
 // create menu for admin form
 
 function crtAdmMnuSlct (slct_html, menuTree, level) {
-	// var mnuTree = crtMnuTree(data);
-
+	
 	var levelInd = "";
 
 	for (var i = 0; i < level; i++) {

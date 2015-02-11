@@ -65,7 +65,9 @@ function getMnuLnks(data, destination) {
 				crtAdmMnuSlct (slct_html, menuTree, 0);
 
 				$("#admin-form .menuSelect").html(slct_html);
-			} else {
+			} 
+
+			else {
 				var mn_html = $("<ul/>");
 
 				crtMainMnu (mn_html, menuTree);

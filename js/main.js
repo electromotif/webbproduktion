@@ -42,15 +42,14 @@ $("#admin-form form").submit(function() {
 	
 		//get selected menu parent data
 		adminFormData.menuData = {};
-		//$('.addToMenu select').find(":selected").data("menuItem");
-		adminFormData.menuData["parent"] = {"mlid": null, "menu" : "menu-main-menu"};
+		
+		// get parent link (the mlid which is stored as plid for the page submitted)
+		adminFormData.menuData ["parent"] = {"mlid": $(".addToMenu option:selected").val(), "menu" : "menu-main-menu"};
 		//get menu link title
 		adminFormData.menuData["title"] = $('.addToMenu #menu_title').val();
 		//get menu link order
 		adminFormData.menuData["weight"] = $('.addToMenu #menu_weight').val();
 	}
-
- 
 	
 	insertNuPg(adminFormData);
 
