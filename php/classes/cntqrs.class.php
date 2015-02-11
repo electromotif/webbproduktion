@@ -65,7 +65,8 @@ class CntQrs extends PDOHelper {
 
 	public function get_mnu_lnks () {
 
-		$sql = "SELECT * FROM menu_links ORDER BY mlid DESC";
+		// $sql = "SELECT * FROM menu_links ORDER BY mlid DESC";
+		$sql = "SELECT * FROM menu_links ORDER BY weight ASC";
 		return $this->query($sql);
 
 	}

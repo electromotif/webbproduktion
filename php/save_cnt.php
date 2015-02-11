@@ -12,9 +12,6 @@ $cq = New CntQrs("127.0.0.1","pantopia","root","mysql");
 		$page_path = $page_data[":path"];
     $menu_data = $page_data["menuData"];  	
 
-
-
-
 		//unset path and menu from $page_data
 		unset($page_data["menuData"]);
 		unset($page_data[":path"]);

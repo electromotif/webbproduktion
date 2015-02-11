@@ -8,6 +8,8 @@
 
 //function to show/hide sections
 function showPage(pageUrl) {
+
+	console.log("showPage");
   
 }
 
@@ -62,7 +64,7 @@ function pushPopListeners() {
 
     // if no pageName set pageName to false
     pageName = pageName || false;
-    console.log("pageName: ", pageName);
+    // console.log("pageName: ", pageName);
     //and showPage
     showPage(pageName);
   }

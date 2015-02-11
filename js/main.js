@@ -1,15 +1,10 @@
 $("document").ready(function(){
 
 pushPopListeners();
-getMnuLnks();
+getMnuLnks("admin-form");
+
 
 //-----
-
-
-
-
-
-
 
 //-----
 	
@@ -47,7 +42,8 @@ $("#admin-form form").submit(function() {
 	
 		//get selected menu parent data
 		adminFormData.menuData = {};
-		adminFormData.menuData["parent"] = {"mlid": null, "menu" : "menu-main-menu"};//$('.addToMenu select').find(":selected").data("menuItem");
+		//$('.addToMenu select').find(":selected").data("menuItem");
+		adminFormData.menuData["parent"] = {"mlid": null, "menu" : "menu-main-menu"};
 		//get menu link title
 		adminFormData.menuData["title"] = $('.addToMenu #menu_title').val();
 		//get menu link order
@@ -55,11 +51,14 @@ $("#admin-form form").submit(function() {
 	}
 
  
-	// console.log(adminFormData);
+	
 	insertNuPg(adminFormData);
-	// this.reset();
+
+	this.reset();
+
 	return false;
 });
+
 
     
   
