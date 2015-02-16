@@ -3,6 +3,7 @@ $("document").ready(function(){
 pushPopListeners();
 getMnuLnks("admin-form");
 getMnuLnks("main");
+cntList();
 	
 //adminForm pageUrlGroup clickHandler
 

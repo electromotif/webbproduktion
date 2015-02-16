@@ -43,7 +43,13 @@ function crtMnuTree (menuLinks) {
     hashMap["_"+item.plid].children.push(item);
   }; 
 
-  // console.log (JSON.stringify(menuTree));
+  		// sort links by children.lenght (high to low)
+			// (menu order by	depth. In the DOM - deepest to the left
+
+			menuTree.sort(function(x,y){
+			return x.children.length < y.children.length;
+
+		}); 
 
 	return menuTree;
 };
@@ -73,6 +79,7 @@ function crtAdmMnuSlct (slct_html, menuTree, level) {
 // create user/main menu
 
 function crtMainMnu (ul_html, menuLevel) {
+
 	for (var i = 0; i < menuLevel.length; i++) {
 		if (menuLevel[i].children.length > 0) {
 			var mnuItem = $('<li class="dropdown"><a href="'+menuLevel[i].path+'">'+menuLevel[i].title+'</a></li>');
@@ -92,6 +99,7 @@ function crtMainMnu (ul_html, menuLevel) {
 }
 
 
+/*
 function crtMainMnu2 (ul_html, menuLevel) {
 	for (var i = 0; i < menuLevel.length; i++) {
 		var mnuItem = $('<li><a href="'+menuLevel[i].path+'">'+menuLevel[i].title+'</a></li>');
@@ -107,8 +115,7 @@ function crtMainMnu2 (ul_html, menuLevel) {
 		ul_html.append(mnuItem);
 	}
 }
-
-
+*/
 
 
 

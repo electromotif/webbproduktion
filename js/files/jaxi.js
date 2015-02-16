@@ -28,21 +28,22 @@ function insertNuPg(adminFormData) {
 }
 
 function cntList(data) {
-	/*$.ajax({
+	$.ajax({
 		url: "php/cnt_list.php",
-		type: "GET",
+		type: "POST",
 		dataType: "json",
-		data: "",
-	}),
+		data: {},
 
-	success: function(data) {
-		console.log("jaxi away!");
-	},
-	error: function(data) {
-		console.log("cntList error");
-	}*/
-
+		success: function(data) {
+			console.log("cntList Ajax");
+			crtCntList(data);
+		},
+		error: function(data) {
+			console.log("cntList error");
+		}
+	});
 }
+
 
 function getMnuLnks(destination) {
 
@@ -55,7 +56,8 @@ function getMnuLnks(destination) {
 		success: function(data) {
 			
 			var menuTree = crtMnuTree(data);
-			console.log(destination);
+
+			console.log("getMnuLnks dest: ", destination);
 			if (destination == "admin-form") {
 				var slct_html = $('<select class="form-control"/>');
 
