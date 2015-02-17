@@ -40,6 +40,26 @@ main p {
 	font-family: "Oswald", sans-serif;
 }
 
+table .table-condensed.allpgs td {
+	border: none;
+}
+
+.pageTableHeads th{
+	color: #888;
+
+}
+
+.smcurtxt {
+	font-size: 70%;
+	font-style: italic;
+}
+
+
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #DA7310;
+}
+
 #admin-form {
 	font-family: "Oswald", sans-serif;
 }
