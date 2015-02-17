@@ -1,5 +1,4 @@
 function crtCntList (data) {
-	console.log ("crtCntlist: ", data);
 
 	// tableheads
 
@@ -15,7 +14,7 @@ function crtCntList (data) {
 
 	$('.table-condensed.allpgs').append(tblHds); 
 
-	// $('.table-condensed.allpgs').append('<tbody>');
+	// rows
 
 	for (var i = 0; i < data.length; i++) {
 
@@ -23,10 +22,15 @@ function crtCntList (data) {
 
 		row.append('<td>'+data[i].pid+'</td>');
 
-		// edit/trash icons
+		// edit/trash icons. prepend url with e for edit, t for trash.
+		// dev. suspended 
+		
+		// row.append('<td><a href="e'+data[i].pid+'"><span class="glyphicon glyphicon-edit"> </span></a></td>');
+		// row.append('<td><a href="t'+data[i].pid+'"><span class="glyphicon glyphicon-trash"> </span></a></td>');
 
-		row.append('<td><a href="-'+data[i].pid+'"><span class="glyphicon glyphicon-edit"> </span></a></td>');
-		row.append('<td><a href="--'+data[i].pid+'"><span class="glyphicon glyphicon-trash"> </span></a></td>');
+		row.append('<td> </td> <td> </td>');
+
+		// title & author
 
 		row.append('<td>'+data[i].title+'</td>');
 		row.append('<td>'+data[i].author+'</td>');
@@ -37,26 +41,20 @@ function crtCntList (data) {
 
 		row.append('<td>'+date+'</td>');
 
-		// display 70 characters of body..
+		// display 70 characters of body, end row and shove it to DOM.
 
 		var bdy = data[i].body.substring(0, 69);
 
 		row.append('<td class="smcurtxt">'+bdy+'...</td>');
-
-		
-		
 		row.append('</tr>');
 		
 		$('.table-condensed.allpgs').append(row);  
 
 		}
-
-	// $('.table-condensed.allpgs').append('</tbody>');
-
 }
 
-/* 
+function crtFooter (data) {
+	
+	$('#ftrcont').append(data[0].body); 
 
-		row.append('<span class="badge">'+data[i].pid+'</span></a></td>');
-		
-*/
+}

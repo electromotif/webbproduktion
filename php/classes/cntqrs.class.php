@@ -51,6 +51,8 @@ class CntQrs extends PDOHelper {
 
 	} */
 
+	// contentlist, links, footer
+
 	public function cnt_list(){
 		
 		// dead simple query for contenlist..
@@ -65,6 +67,11 @@ class CntQrs extends PDOHelper {
 		$sql = "SELECT * FROM menu_links ORDER BY weight ASC";
 		return $this->query($sql);
 
+	}
+
+	public function get_footer () {
+		$sql = "SELECT * FROM pages ORDER BY pid ASC LIMIT 1";
+		return $this->query($sql);
 	}
 
 };

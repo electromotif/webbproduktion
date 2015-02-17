@@ -4,6 +4,7 @@ pushPopListeners();
 getMnuLnks("admin-form");
 getMnuLnks("main");
 cntList();
+getFtr();
 	
 //adminForm pageUrlGroup clickHandler
 

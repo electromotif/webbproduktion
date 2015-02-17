@@ -1,6 +1,3 @@
-
-
-
 /**
  * Navigation & history push/pop-state
  *
@@ -9,9 +6,23 @@
 //function to show/hide sections
 function showPage(pageUrl) {
 
-	console.log("showPage: ", pageUrl);
-  
-}
+	/* 
+
+	handles edit/trash actions from contentlist.
+	Development suspended for the time being 
+
+	cmd = pageUrl.substring(0,1);
+	url = pageUrl.substring(1);
+
+	switch (cmd) 
+	{
+		case 'e': console.log('edit: ', url);
+			break;
+		case 't': console.log('trash: ', url);
+			break;	
+	}; */
+	
+} 
 
 
 //go to "page" function

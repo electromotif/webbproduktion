@@ -84,3 +84,21 @@ function getMnuLnks(destination) {
 		}
 	});
 }
+
+function getFtr (data) {
+	$.ajax({
+		url: "php/get_ftr.php",
+		type: "GET",
+		dataType: "json",
+		data: {},
+
+		success: function (data) {
+			console.log('footer: ', data);
+			crtFooter(data);
+		},
+		error: function(data) {
+			console.log ("getFtr error", data);
+		}
+
+	})
+}
