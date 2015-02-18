@@ -1,5 +1,7 @@
 function crtCntList (data) {
 
+	$('.table-condensed.allpgs').html("");
+
 	// tableheads
 
 	var tblHds = '<tr class="pageTableHeads">'+
@@ -55,6 +57,6 @@ function crtCntList (data) {
 
 function crtFooter (data) {
 	
-	$('#ftrcont').append(data[0].body); 
+	$('#ftrcont').html(data[0].body); 
 
 }

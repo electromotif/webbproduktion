@@ -6,8 +6,19 @@
 //function to show/hide sections
 function showPage(pageUrl) {
 
-	/* 
+	switch (pageUrl) {
+		case 'admin': admState();
+			break;
+		case 'home': splashState();
+			break;
+		default: ldPage(pageUrl);
+	}
 
+	/* $('#admSideBar').hide();
+	$('#content-list').hide();
+	$('#admin-form').hide(); */
+ 
+	/* 
 	handles edit/trash actions from contentlist.
 	Development suspended for the time being 
 

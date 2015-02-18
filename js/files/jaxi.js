@@ -93,7 +93,6 @@ function getFtr (data) {
 		data: {},
 
 		success: function (data) {
-			console.log('footer: ', data);
 			crtFooter(data);
 		},
 		error: function(data) {

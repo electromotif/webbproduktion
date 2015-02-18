@@ -1,10 +1,8 @@
 $("document").ready(function(){
 
 pushPopListeners();
-getMnuLnks("admin-form");
-getMnuLnks("main");
-cntList();
-getFtr();
+splashState();
+
 	
 //adminForm pageUrlGroup clickHandler
 

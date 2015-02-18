@@ -1,12 +1,15 @@
 html, body {
-	background-image: url(../img/view.jpg); 
+	background-image: url(../img/view.jpg);
 	background-repeat:no-repeat;
-  background-size: 125%, 125%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #000;  
+	color: #FFF;
+	
 	width: 100%;
 	height: 100%;
 	font-size: 100%;
-	background-color: #000; 
-	color: #FFF;
+
 }
 
 nav {
@@ -46,7 +49,6 @@ table .table-condensed.allpgs td {
 
 .pageTableHeads th{
 	color: #888;
-
 }
 
 .smcurtxt {
@@ -62,6 +64,14 @@ table .table-condensed.allpgs td {
 	font-family: "Oswald", sans-serif;
 }
 
+#svPage {
+	background-color: #888;
+	border-color: #555;
+	
+}
+
+/* ----- user search */
+
 #usersrch {
 	background-color: rgba(0,0,0,0.5);
 	border: 1px solid #444;
@@ -72,6 +82,10 @@ table .table-condensed.allpgs td {
 	background-color: rgba(0,0,0,0.5);
 	border: 1px solid #444;
 	color: #999;
+}
+
+#admLnk a {
+	color: #8D4501;
 }
 
 /* submenu dropdown positioning (toplevel dropdowns already look great!) */
@@ -85,6 +99,8 @@ table .table-condensed.allpgs td {
     display: block;
 }
 
+/* ----- Panels, headers, menu elements */
+
 .navbar-invert {
   background-color: rgba(0,0,20,0.5);
 }
@@ -92,6 +108,12 @@ table .table-condensed.allpgs td {
 .navbar-invert a {
   color: #DA7310;
 }  
+
+.navbar-brand img {
+	vertical-align: top;
+	margin-top: -18px;
+
+}
 
 .nav > li > a:hover {
 	background-color: transparent;
@@ -120,7 +142,6 @@ table .table-condensed.allpgs td {
 	color: #FFF;
   /* background-color: rgba(0,0,0,0.3); */
   background-color: transparent;
-
 }
 
 section .panel.panel-default {
@@ -151,6 +172,10 @@ html, body {
 	margin: 0 auto -4em;
 }
 
+#ftrcont {
+	
+}
+
 .footer, .push {
 height: 4em;
 }
@@ -164,11 +189,11 @@ height: 4em;
 .footer .ftrhead {
 	font-family:  "Six Caps", sans-serif;
 	font-size: 250%;
-	color: #8D4501;
+	color: #DA7310;
 }
 
 .jumbotron {
-	background-color: rgba(0,0,20,0.5);
+	background: rgba(0,0,20,0.5);
 	margin-top: 20px;
 	margin-bottom: 0;
 }
