@@ -5,18 +5,21 @@
 
 //function to show/hide sections
 function showPage(pageUrl) {
+	console.log("pageUrl: ", pageUrl);
+	if (pageUrl) {
 
-	switch (pageUrl) {
-		case 'admin': admState();
-			break;
-		case 'home': splashState();
-			break;
-		default: ldPage(pageUrl);
+		switch (pageUrl) {
+			case 'admin': admState();
+				break;
+			case 'home': splashState();
+				break;
+			default: loadPg(pageUrl);
+		}
+
+	} else {
+		splashState();
 	}
-
-	/* $('#admSideBar').hide();
-	$('#content-list').hide();
-	$('#admin-form').hide(); */
+}
  
 	/* 
 	handles edit/trash actions from contentlist.
@@ -33,8 +36,7 @@ function showPage(pageUrl) {
 			break;	
 	}; */
 	
-} 
-
+ 
 
 //go to "page" function
 function goTo(href) {
@@ -45,7 +47,6 @@ function goTo(href) {
   // Add the current "state/page" to our history of visited pages
   history.pushState(null,null,href);
 }
-
 
 //setup push/pop-state pushPopListeners for <a> tags
 function pushPopListeners() {
@@ -65,7 +66,6 @@ function pushPopListeners() {
 
     event.preventDefault();
   });
-
 
   // Add a pop state listener
   // (listen to forward/backward buttons in the browser)

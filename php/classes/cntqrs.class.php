@@ -33,7 +33,7 @@ class CntQrs extends PDOHelper {
 
 	}
 
-	/* public function saveUrlAlias ($HMM) {
+	public function saveUrlAls ($page_path) {
 
     $sql = "SELECT pid FROM pages ORDER BY created DESC LIMIT 1";
     $new_pid = $this->query($sql);
@@ -49,7 +49,7 @@ class CntQrs extends PDOHelper {
 
     $this->query($sql2, $url_data);
 
-	} */
+	} 
 
 	// contentlist, links, footer
 
@@ -72,6 +72,10 @@ class CntQrs extends PDOHelper {
 	public function get_footer () {
 		$sql = "SELECT * FROM pages ORDER BY pid ASC LIMIT 1";
 		return $this->query($sql);
+	}
+
+	public function get_page($path) {
+		$sql = "SELECT pages.* FROM pages, url_alias WHERE url_alias.pid = pages.pid && url_alias.path = :path";
 	}
 
 };

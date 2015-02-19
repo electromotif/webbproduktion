@@ -30,6 +30,11 @@ $cq = New CntQrs("127.0.0.1","pantopia","root","mysql");
 	     );
 
 			$cq->saveNuPthMenu($menu_data);
+
+			// and url alias
+
+			$cq->saveUrlAls($page_path);
+
 		}
 
 	  echo(json_encode(true));

@@ -85,6 +85,23 @@ function getMnuLnks(destination) {
 	});
 }
 
+function getPg (pageUrl) {
+	$.ajax({
+		url: "php/get_pg.php",
+		type: "POST",
+		dataType: "json",
+		data: {":path" : pageUrl},
+
+		success: function (data) {
+			crtPg(data);
+		},
+		error: function(data) {
+			console.log ("getPg error", data);
+		}
+
+	})
+}
+
 function getFtr (data) {
 	$.ajax({
 		url: "php/get_ftr.php",

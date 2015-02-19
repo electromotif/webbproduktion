@@ -1,8 +1,6 @@
 $("document").ready(function(){
 
 pushPopListeners();
-splashState();
-
 	
 //adminForm pageUrlGroup clickHandler
 
@@ -48,8 +46,14 @@ $("#admin-form form").submit(function() {
 	}
 	
 	insertNuPg(adminFormData);
+	
+	// reset form
 
 	this.reset();
+
+	// back to adminstate
+
+	admState ();
 
 	return false;
 });
