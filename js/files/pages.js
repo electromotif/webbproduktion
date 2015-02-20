@@ -8,7 +8,8 @@ function admState () {
 	// a page submit - user wants to see the submit reflected.
 	getMnuLnks("admin-form");
 	getMnuLnks("main");
-
+	getImgs();
+	getFtr(); 
 	cntList();
 
 	$('#splash').hide();
@@ -37,18 +38,20 @@ getFtr();
 
 function loadPg (pageUrl) {
 	console.log('getPg: ', pageUrl);
+	$('#splash').hide();
 	$('#pagecontent').hide();
 	$('#admSideBar').hide();
 	$('#content-list').hide();
 	$('#admin-form').hide();
 
+	getFtr();
 	getPg(pageUrl);
 	getMnuLnks("main");
 
 
 	// display page
 
-	$('#pagecontent').show()
+	$('#pagecontent').fadeIn(400)
 
 }
 

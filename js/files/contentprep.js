@@ -1,3 +1,7 @@
+// prepares and writes content to dom
+
+// create content-list (list of all pages)
+
 function crtCntList (data) {
 
 	$('.table-condensed.allpgs').html("");
@@ -54,6 +58,32 @@ function crtCntList (data) {
 
 		}
 }
+
+function crtImgSlct () {
+	// image select
+
+	var img_html = $('<br><select class="form-control"/>');
+	var slctImg = $('<option value="">Select image</option>');
+
+	img_html.append(slctImg);
+
+	for (var i = 0; i < imgData.length; i++) {
+
+		var slctItem = $('<option value="'+imgData[i].något+'">'+imgData[i].title+'</option>');
+		
+		slctItem.data("itmKey", imgData[i]);
+		
+		slct_html.append(slctItem);
+	}
+
+
+	$("#admin-form .menuSelect").html(slct_html);
+
+}
+
+
+
+// write footer
 
 function crtFooter (data) {
 	

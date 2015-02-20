@@ -69,6 +69,13 @@ class CntQrs extends PDOHelper {
 
 	}
 
+	public function get_imgs () {
+
+		$sql = "SELECT * FROM images ORDER BY iid DESC";
+		return $this->query($sql);
+
+	}
+
 	public function get_footer () {
 		$sql = "SELECT * FROM pages ORDER BY pid ASC LIMIT 1";
 		return $this->query($sql);

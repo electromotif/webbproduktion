@@ -6,19 +6,18 @@
 //function to show/hide sections
 function showPage(pageUrl) {
 	console.log("pageUrl: ", pageUrl);
-	if (pageUrl) {
 
 		switch (pageUrl) {
 			case 'admin': admState();
 				break;
 			case 'home': splashState();
 				break;
+			case 'false': splashState();
+				break;
 			default: loadPg(pageUrl);
 		}
 
-	} else {
-		splashState();
-	}
+	
 }
  
 	/* 

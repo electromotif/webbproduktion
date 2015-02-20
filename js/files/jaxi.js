@@ -59,15 +59,18 @@ function getMnuLnks(destination) {
 
 			console.log("getMnuLnks dest: ", destination);
 			if (destination == "admin-form") {
-				var slct_html = $('<select class="form-control"/>');
+				
+				// menu select html
 
+				var slct_html = $('<select class="form-control"/>');
 				var topOptn = $('<option value="">Top</option>');
 
 				slct_html.append(topOptn);
 
 				crtAdmMnuSlct (slct_html, menuTree, 0);
 
-				$("#admin-form .menuSelect").html(slct_html);
+				$("#admin-form .menuSelect").append(slct_html);
+
 			} 
 
 			else {
@@ -100,6 +103,25 @@ function getPg (pageUrl) {
 		}
 
 	})
+}
+
+function getImgs () {
+	$.ajax({
+		url: "php/get_imgs.php",
+		type: "POST",
+		dataType: "json",
+		data: {},
+
+		success: function (data) {
+			console.log ("getImgs: ", data);
+			// crtImgSlct(data);
+		},
+		error: function(data) {
+			console.log ("getImgs error", data);
+		}
+
+	})
+
 }
 
 function getFtr (data) {

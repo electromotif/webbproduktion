@@ -51,10 +51,6 @@ $("#admin-form form").submit(function() {
 
 	this.reset();
 
-	// back to adminstate
-
-	// admState ();
-
 	return false;
 });
 
