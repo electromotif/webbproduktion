@@ -17,9 +17,9 @@ function insertNuPg(adminFormData) {
       "page_data" : adminFormData
     },
     success: function(data) {
-      //on success, goTo() the contentList url
-      //goTo("content-list");
-      console.log("insertNuPg success: ", data);
+    	console.log("insertNuPg success: ", data);
+      //on success, back to adminState.
+      admState();
     },
     error: function(data) {
       console.log("insertNewPage error: ", data);

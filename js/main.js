@@ -53,7 +53,7 @@ $("#admin-form form").submit(function() {
 
 	// back to adminstate
 
-	admState ();
+	// admState ();
 
 	return false;
 });

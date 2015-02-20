@@ -3,19 +3,19 @@
 
 function admState () {
 	console.log('admState');
+	
+	// update menu links in case we are returning from
+	// a page submit - user wants to see the submit reflected.
 	getMnuLnks("admin-form");
+	getMnuLnks("main");
+
 	cntList();
+
 	$('#splash').hide();
 	$('#pagecontent').hide();
 	$('#admSideBar').fadeIn(400);
 	$('#admin-form').fadeIn(400);
 	$('#content-list').fadeIn(400);
-
-	// update main/user menu links in case we are returning from
-	// a page submit - user wants to see the submit reflected.
-
-	getMnuLnks("main");
-
 }
 
 // Splashstate - Hide administrative items, display splash, menus and footer
