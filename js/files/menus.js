@@ -97,28 +97,3 @@ function crtMainMnu (ul_html, menuLevel) {
 		ul_html.append(mnuItem);
 	}
 }
-
-
-/*
-function crtMainMnu2 (ul_html, menuLevel) {
-	for (var i = 0; i < menuLevel.length; i++) {
-		var mnuItem = $('<li><a href="'+menuLevel[i].path+'">'+menuLevel[i].title+'</a></li>');
-		
-		if (menuLevel[i].children.length > 0) {
-			mnuItem.addClass("dropdown");
-			var dropdown = $('<ul class="dropdown-menu"/>');
-			mnuItem.prepend(dropdown);
-
-			crtMainMnu(dropdown, menuLevel[i].children);
-		}
-
-		ul_html.append(mnuItem);
-	}
-}
-*/
-
-
-
-
-
-

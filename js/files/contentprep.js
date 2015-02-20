@@ -61,7 +61,7 @@ function crtCntList (data) {
 function crtImgSlct (imgData) {
 	// image select
 
-	var img_html = $('<br><select class="form-control"/>');
+	var img_html = $('<select class="form-control"/>');
 	var slctImg = $('<option value="">Select image</option>');
 
 	img_html.append(slctImg);
@@ -69,14 +69,14 @@ function crtImgSlct (imgData) {
 	for (var i = 0; i < imgData.length; i++) {
 
 		var slctItem = $('<option value="'+imgData[i].iid+'">'+imgData[i].title+'</option>');
-		console.log('looping images', i);
+		
 		// slctItem.data("itmKey", imgData[i]);
 		
 		img_html.append(slctItem);
 	}
 
-	$("#admin-form .menuSelect").append(img_html);
-	console.log ('appended images');
+	$("#admin-form .addImage").html(img_html);
+	
 }
 
 

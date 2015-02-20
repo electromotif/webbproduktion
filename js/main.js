@@ -23,28 +23,32 @@ $('#admin-form .pageUrlGroup').on( "click", 'input[type=checkbox]', function() {
 
 $("#admin-form form").submit(function() {
 	
-	//prepare adminFormData to be sent with AJAX
+	// prepare adminFormData to be sent with AJAX
 	
 	var adminFormData = {
 	  ":title" : $(this).find("#page_title").val(),
 	  ":body" : $(this).find("#page_body").val(),
-	  ":path" : $(this).find("#page_url").val()
+	  ":path" : $(this).find("#page_url").val(),
+	  ":img_id": $('.addImage option:selected').val()
 	};
 
 
 	if ($('.addToMenu input[type="checkbox"]').is(":checked")) {
 	
-		//get selected menu parent data
+		// get selected menu parent data
 		adminFormData.menuData = {};
 		
 		// get parent link (the mlid which is stored as plid for the page submitted)
 		adminFormData.menuData ["parent"] = {"mlid": $(".addToMenu option:selected").val(), "menu" : "menu-main-menu"};
-		//get menu link title
+		// get menu link title
 		adminFormData.menuData["title"] = $('.addToMenu #menu_title').val();
-		//get menu link order
+		// get menu link order
 		adminFormData.menuData["weight"] = $('.addToMenu #menu_weight').val();
+
 	}
 	
+	// console.log(adminFormData);
+
 	insertNuPg(adminFormData);
 	
 	// reset form

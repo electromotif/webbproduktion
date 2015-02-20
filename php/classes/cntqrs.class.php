@@ -19,7 +19,7 @@ class CntQrs extends PDOHelper {
 
 		//prep sql and run query
 
-		$sql="INSERT INTO pages (title, body, user_id) VALUES (:title, :body, :user_id)";
+		$sql="INSERT INTO pages (title, body, img_id, user_id) VALUES (:title, :body, :img_id, :user_id)";
 		$this->query($sql, $page_data);
 
 	}
