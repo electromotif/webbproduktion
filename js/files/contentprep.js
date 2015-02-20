@@ -1,4 +1,3 @@
-// prepares and writes content to dom
 
 // create content-list (list of all pages)
 
@@ -59,7 +58,7 @@ function crtCntList (data) {
 		}
 }
 
-function crtImgSlct () {
+function crtImgSlct (imgData) {
 	// image select
 
 	var img_html = $('<br><select class="form-control"/>');
@@ -69,16 +68,15 @@ function crtImgSlct () {
 
 	for (var i = 0; i < imgData.length; i++) {
 
-		var slctItem = $('<option value="'+imgData[i].något+'">'+imgData[i].title+'</option>');
+		var slctItem = $('<option value="'+imgData[i].iid+'">'+imgData[i].title+'</option>');
+		console.log('looping images', i);
+		// slctItem.data("itmKey", imgData[i]);
 		
-		slctItem.data("itmKey", imgData[i]);
-		
-		slct_html.append(slctItem);
+		img_html.append(slctItem);
 	}
 
-
-	$("#admin-form .menuSelect").html(slct_html);
-
+	$("#admin-form .menuSelect").append(img_html);
+	console.log ('appended images');
 }
 
 

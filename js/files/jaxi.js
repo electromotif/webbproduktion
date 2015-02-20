@@ -69,7 +69,13 @@ function getMnuLnks(destination) {
 
 				crtAdmMnuSlct (slct_html, menuTree, 0);
 
-				$("#admin-form .menuSelect").append(slct_html);
+				$("#admin-form .menuSelect").html(slct_html);
+
+				// AJAX Images for select in adminform
+				// getImgs calls crtImgSlct which appends html
+
+				getImgs () 
+
 
 			} 
 
@@ -112,9 +118,8 @@ function getImgs () {
 		dataType: "json",
 		data: {},
 
-		success: function (data) {
-			console.log ("getImgs: ", data);
-			// crtImgSlct(data);
+		success: function (imgData) {
+			crtImgSlct(imgData);
 		},
 		error: function(data) {
 			console.log ("getImgs error", data);

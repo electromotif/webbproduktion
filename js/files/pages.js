@@ -6,11 +6,11 @@ function admState () {
 	
 	// update menu links in case we are returning from
 	// a page submit - user wants to see the submit reflected.
+	cntList();
 	getMnuLnks("admin-form");
 	getMnuLnks("main");
-	getImgs();
 	getFtr(); 
-	cntList();
+	
 
 	$('#splash').hide();
 	$('#pagecontent').hide();
