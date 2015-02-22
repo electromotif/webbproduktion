@@ -5,25 +5,20 @@
 
 //function to show/hide sections
 function showPage(pageUrl) {
-	console.log("pageUrl: ", pageUrl);
+	console.log("showPage: ", pageUrl);
 
 	if (pageUrl) {
-
 		switch (pageUrl) {
 			case 'admin': admState();
 				break;
 			case 'home': splashState();
 				break;
-			default: loadPg(pageUrl);
+			default: pageState(pageUrl);
 		}
 	} 
-	
 	else {	
-
 	splashState ();
-
 	};
-	
 }
  
 	/* 
@@ -41,8 +36,6 @@ function showPage(pageUrl) {
 			break;	
 	}; */
 	
- 
-
 //go to "page" function
 function goTo(href) {
   // Show a "page" in a section with the id corresponding

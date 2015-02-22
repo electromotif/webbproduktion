@@ -44,7 +44,7 @@ function crtCntList (data) {
 
 		var date = data[i].created.substring(2, 16);
 
-		row.append('<td>'+date+'</td>');
+		row.append('<td class="smdate">'+date+'</td>');
 
 		// display 70 characters of body, end row and shove it to DOM.
 
@@ -59,7 +59,7 @@ function crtCntList (data) {
 }
 
 function crtImgSlct (imgData) {
-	// image select
+	// image select html
 
 	var img_html = $('<select class="form-control"/>');
 	var slctImg = $('<option value="">Select image</option>');

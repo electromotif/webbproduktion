@@ -43,17 +43,21 @@ main p {
 	font-family: "Oswald", sans-serif;
 }
 
-table .table-condensed.allpgs td {
-	border: none;
-}
-
 .pageTableHeads th{
 	color: #888;
+}
+
+.smdate {
+	font-size: 70%
 }
 
 .smcurtxt {
 	font-size: 70%;
 	font-style: italic;
+}
+
+.table-striped > tbody > tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
@@ -62,12 +66,15 @@ table .table-condensed.allpgs td {
 
 #admin-form {
 	font-family: "Oswald", sans-serif;
+	background-color: rgba(0,0,15,0.7);
+	border-color: transparent;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(21,77,143,.6);
+	color: #999;
 }
 
 #svPage {
 	background-color: #888;
 	border-color: #555;
-	
 }
 
 /* ----- user search */
@@ -111,7 +118,7 @@ table .table-condensed.allpgs td {
 
 .navbar-brand img {
 	vertical-align: top;
-	margin-top: -18px;
+	margin-top: -22px;
 
 }
 
@@ -140,7 +147,6 @@ table .table-condensed.allpgs td {
 
 .dropdown-menu > li > a:hover {
 	color: #FFF;
-  /* background-color: rgba(0,0,0,0.3); */
   background-color: transparent;
 }
 
@@ -155,12 +161,20 @@ section .panel.panel-default {
 	color: #888;
 }  
 
+.panel-default .panel-heading h3 {
+	font-size: 18px;
+}  
+
 #pagecontent {
 	margin-top: 40px;
 	padding: 20px;
   background-color: rgba(0,0,5,0.7);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(21,77,143,.6);
-  overflow: scroll;
+  overflow: hidden;
+}
+
+article#pagecontent {
+	display: inline-block;
 }
 
 /* ----- sticky footer */
@@ -180,10 +194,6 @@ html, body {
 	margin: 0 auto -4em;
 }
 
-#ftrcont {
-	
-}
-
 .footer, .push {
 height: 4em;
 }
@@ -198,6 +208,10 @@ height: 4em;
 	font-family:  "Six Caps", sans-serif;
 	font-size: 250%;
 	color: #DA7310;
+}
+
+.ftrhead img {
+	margin-left:10px;
 }
 
 .jumbotron {

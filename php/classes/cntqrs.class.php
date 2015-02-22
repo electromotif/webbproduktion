@@ -12,6 +12,12 @@ class CntQrs extends PDOHelper {
 	* Pages
 	*/
 
+	public function get_page($path) {
+		
+		$sql = "SELECT pages.* FROM pages, url_alias WHERE url_alias.pid = pages.pid && url_alias.path = :path";
+		return $this->query($sql, $path);
+	}
+
 	public function saveNuPg($page_data) {
 			
 		//add user_id before insert
@@ -63,7 +69,6 @@ class CntQrs extends PDOHelper {
 
 	public function get_mnu_lnks () {
 
-		// $sql = "SELECT * FROM menu_links ORDER BY mlid DESC";
 		$sql = "SELECT * FROM menu_links ORDER BY weight ASC";
 		return $this->query($sql);
 
@@ -79,10 +84,6 @@ class CntQrs extends PDOHelper {
 	public function get_footer () {
 		$sql = "SELECT * FROM pages ORDER BY pid ASC LIMIT 1";
 		return $this->query($sql);
-	}
-
-	public function get_page($path) {
-		$sql = "SELECT pages.* FROM pages, url_alias WHERE url_alias.pid = pages.pid && url_alias.path = :path";
 	}
 
 };

@@ -14,7 +14,7 @@
    id="svg3935"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="Nytt dokument 4">
+   sodipodi:docname="cielogo.svg">
   <defs
      id="defs3937" />
   <sodipodi:namedview
@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.5"
-     inkscape:cx="35.235806"
-     inkscape:cy="34.705534"
+     inkscape:zoom="7.7781746"
+     inkscape:cx="11.385478"
+     inkscape:cy="31.598363"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:document-units="px"
@@ -36,7 +36,7 @@
      inkscape:snap-grids="false"
      inkscape:window-width="1315"
      inkscape:window-height="769"
-     inkscape:window-x="40"
+     inkscape:window-x="113"
      inkscape:window-y="40"
      inkscape:window-maximized="0">
     <inkscape:grid
@@ -51,7 +51,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -61,12 +61,12 @@
      inkscape:groupmode="layer">
     <path
        style="fill:#da7310;fill-opacity:1;stroke:#da7310;stroke-width:0.74842536;stroke-opacity:1"
-       d="m 34.674459,20.134765 -8.653671,5.122035 -21.2833468,0 0,7.484255 21.2833468,0 8.653671,5.122037 0,-17.728327 z m -15.833875,7.577806 5.613189,0 0,3.040478 -5.613189,0 0,-3.040478 z"
+       d="m 31.074459,22.684765 -8.653671,5.122035 -21.2833468,0 0,7.484255 21.2833468,0 8.653671,5.122037 0,-17.728327 z m -15.833875,7.577806 5.613189,0 0,3.040478 -5.613189,0 0,-3.040478 z"
        id="rect4463"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:#da7310;fill-opacity:0;stroke:#da7310;stroke-width:0.74386954;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="M 52.437638,9.1747139 36.28947,20.983643 l 0,16.117177 L 52.592611,48.816764 40.473734,32.265664 60.713188,28.980243 40.442741,25.849789 52.437638,9.1747139 z"
+       style="fill:#da7310;fill-opacity:0;stroke:#da7310;stroke-width:2.3440001;stroke-linecap:butt;stroke-miterlimit:6.4000001;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 47.587638,11.724714 -16.148168,11.808929 0,16.117177 16.303141,11.715944 -12.118877,-16.5511 20.239454,-3.285421 -20.270447,-3.130454 11.994897,-16.675075 z"
        id="path4482"
        inkscape:connector-curvature="0" />
   </g>

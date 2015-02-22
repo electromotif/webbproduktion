@@ -36,8 +36,8 @@ getFtr();
 
 // load and display any other page
 
-function loadPg (pageUrl) {
-	console.log('getPg: ', pageUrl);
+function pageState (pageUrl) {
+	console.log('pageState: ', pageUrl);
 	$('#splash').hide();
 	$('#pagecontent').hide();
 	$('#admSideBar').hide();
@@ -47,7 +47,6 @@ function loadPg (pageUrl) {
 	getFtr();
 	getPg(pageUrl);
 	getMnuLnks("main");
-
 
 	// display page
 

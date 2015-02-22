@@ -2,8 +2,6 @@
 
 // This file contains all AJAX requests
 
-
-
 //function to insert a new page into the DB
 
 function insertNuPg(adminFormData) {
@@ -96,13 +94,13 @@ function getMnuLnks(destination) {
 
 function getPg (pageUrl) {
 	$.ajax({
-		url: "php/get_pg.php",
-		type: "POST",
+		url: "php/get_page.php",
+		type: "GET",
 		dataType: "json",
 		data: {":path" : pageUrl},
 
 		success: function (data) {
-			crtPg(data);
+			console.log ("getPg: ", data);
 		},
 		error: function(data) {
 			console.log ("getPg error", data);

@@ -87,7 +87,7 @@
 		          offsets on. otherwise bootstrap seems to keep the offset when switching
 		          using col-
 		        -->
-		        <section class="mySidebar col-xs-10 col-sm-8 col-md-4 col-lg-4 col-xs-offset-1 col-sm-offset-2 col-md-offset-0 col-lg-offset-0" id="admSideBar">
+		        <!-- <section class="mySidebar col-xs-10 col-sm-8 col-md-4 col-lg-4 col-xs-offset-1 col-sm-offset-2 col-md-offset-0 col-lg-offset-0" id="admSideBar">
 		          <section class="panel panel-default">
 		            <div class="panel-heading">
 		              <h3 class="panel-title">Admin Sidebar</h3>
@@ -99,37 +99,22 @@
 		              </ul>
 		            </div>
 		          </section>
-		        </section>
-
-		        <!-- our "content list" -->
-		        <section id="content-list" class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-		          <!-- a bootstrap panel with heading and a table -->
-		          <div class="panel panel-default">
-		            <div class="panel-heading">
-		              <h3 class="panel-title">All Pages</h3>
-		            </div>
-		            <!-- listing of content using a table -->
-		            <!-- .table is a bootstrap class -->
-		            <table class="table-hover table-condensed allpgs" >
-		              <!-- table inserted via jQuery -->
-		            </table>
-		          </div>
-		        </section>
+		        </section> -->
 
 		        <!-- our "admin form" -->
-		        <section id="admin-form" class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+		        <section id="admin-form" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 		          <!-- using the .form-horizontal -->
 		          <form class="form-horizontal">
 		            <!-- put the header in a form-group with an offset to make it fit in with rest of content -->
 		            <div class="form-group">
 		              <div class="col-sm-8 col-sm-offset-2">
-		                <h2>Administer pages:</h2>
+		                <h4>Add page:</h4>
 		              </div>
 		            </div>
 		            <div class="form-group">
 		              <label class="col-sm-2 control-label" for="page_title">Page Title</label>
 		              <div class="col-sm-10">
-		                <input type="text" id="page_title" class="form-control" placeholder="Enter page title...">
+		                <input type="text" id="page_title" class="form-control" placeholder="">
 		              </div>
 		            </div>
 		            <div class="form-group">
@@ -139,14 +124,14 @@
 		                  <span class="input-group-addon">
 		                    <input type="checkbox">
 		                  </span>
-		                  <input type="text" id="page_url" class="form-control" placeholder="Enter page url..." disabled>
+		                  <input type="text" id="page_url" class="form-control" placeholder="" disabled>
 		                </div>
 		              </div>
 		            </div>
 		            <div class="form-group">
 		              <label class="col-sm-2 control-label" for="page_body">Page Body</label>
 		              <div class="col-sm-10">
-		                <textarea id="page_body" class="form-control" rows="10" placeholder="Enter page body content..." ></textarea>
+		                <textarea id="page_body" class="form-control" rows="10" placeholder="" ></textarea>
 		              </div>
 		            </div>
 		            <div class="form-group addToMenu">
@@ -161,7 +146,7 @@
 
 		              <div class="col-sm-10 col-sm-offset-2 menuLinkFields">
 		                <div class="input-group">
-		                  <input type="text" class="form-control" id="menu_title" placeholder="Enter Menu Link Title...">
+		                  <input type="text" class="form-control" id="menu_title" placeholder="Menu-link title here...">
 		                  <span class="input-group-addon" id="basic-addon2">Weight:</span>
 		                  <input type="number" value="0" id="menu_weight" class="form-control">
 		                </div>
@@ -182,6 +167,20 @@
 		              </div>
 		            </div>
 		          </form>
+		        </section>
+		         <!-- our "content list" -->
+		        <section id="content-list" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+		          <!-- a bootstrap panel with heading and a table -->
+		          <div class="panel panel-default">
+		            <div class="panel-heading">
+		              <h3 class="panel-title">All Pages</h3>
+		            </div>
+		            <!-- listing of content using a table -->
+		            <!-- .table is a bootstrap class -->
+		            <table class="table-condensed table-hover table-striped allpgs" >
+		              <!-- table inserted via jQuery -->
+		            </table>
+		          </div>
 		        </section>
 		      </section>
 				</main>
