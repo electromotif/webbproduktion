@@ -74,7 +74,6 @@ function getMnuLnks(destination) {
 
 				getImgs () 
 
-
 			} 
 
 			else {
@@ -99,8 +98,8 @@ function getPg (pageUrl) {
 		dataType: "json",
 		data: {":path" : pageUrl},
 
-		success: function (data) {
-			console.log ("getPg: ", data);
+		success: function (pgData) {
+			crtPg(pgData);
 		},
 		error: function(data) {
 			console.log ("getPg error", data);
@@ -108,6 +107,25 @@ function getPg (pageUrl) {
 
 	})
 }
+
+function getImg (pgImg) {
+	$.ajax({
+		url: "php/get_img.php",
+		type: "POST",
+		dataType: "json",
+		data: {":image" : pgImg},
+
+		success: function (imgData) {
+			crtImg(imgData);
+		},
+		error: function(data) {
+			console.log ("getImg error", data);
+		}
+
+	})
+
+}
+
 
 function getImgs () {
 	$.ajax({

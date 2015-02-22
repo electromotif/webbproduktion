@@ -71,6 +71,12 @@ class CntQrs extends PDOHelper {
 
 		$sql = "SELECT * FROM menu_links ORDER BY weight ASC";
 		return $this->query($sql);
+	}
+
+	public function get_img ($pgImg) {
+
+		$sql = "SELECT * FROM images WHERE images.iid = :image";
+		return $this->query($sql, $pgImg);
 
 	}
 

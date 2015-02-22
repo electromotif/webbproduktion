@@ -79,6 +79,30 @@ function crtImgSlct (imgData) {
 	
 }
 
+function crtPg (pgData) {
+
+	console.log ('crtPg pgData', pgData);
+
+	var titleHtml = $('<h1>'+pgData[0].title+'</h1>');
+	var bodyHtml = $('<p>'+pgData[0].body+'</p>');
+
+	$('#pagetitle').html(titleHtml);
+	$('#pagebody').html(bodyHtml);
+
+	getImg (pgData[0].img_id);
+}
+
+function crtImg (imgData) {
+	console.log ('crtImg: ', imgData[0].path);
+	var imgHtml = $('<img src="'+imgData[0].path+'">');
+	var imgCrdHtml = $('<p>'+imgData[0].description+'</p>');
+
+	$('#pagecontent').prepend(imgHtml);
+	
+	$('#pagetitle').append(imgCrdHtml);
+
+}
+
 
 
 // write footer
@@ -88,3 +112,11 @@ function crtFooter (data) {
 	$('#ftrcont').html(data[0].body); 
 
 }
+
+
+
+
+
+
+
+

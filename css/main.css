@@ -9,7 +9,6 @@ html, body {
 	width: 100%;
 	height: 100%;
 	font-size: 100%;
-
 }
 
 nav {
@@ -173,8 +172,32 @@ section .panel.panel-default {
   overflow: hidden;
 }
 
-article#pagecontent {
+#pagecontent {
 	display: inline-block;
+}
+
+#pagetitle {
+	display: inline-block;
+}
+
+#pagetitle h1 {
+	margin-left: 20px;
+	margin-right: 10px;
+}
+
+#pagetitle p {
+	color: #666;
+	margin-left: 20px;
+} 
+
+#pagebody {
+	display: inline-block;
+}
+
+#pagebody p {
+	margin-top: 20px;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 /* ----- sticky footer */

@@ -43,6 +43,8 @@ function pageState (pageUrl) {
 	$('#admSideBar').hide();
 	$('#content-list').hide();
 	$('#admin-form').hide();
+						
+	$('#pagecontent').html('<section id="pagetitle"></section><section id="pagebody"></section>');	
 
 	getFtr();
 	getPg(pageUrl);
